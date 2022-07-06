@@ -55,9 +55,12 @@ code {
 .sidebar__channels {
   flex: 1;
 }
-
+.sidebar__addChannel {
+  color: green;
+}
 .sidebar__addChannel:hover {
-  color: white;
+  background-color: rgb(0, 128, 0, 0.5);
+  transition: 0.5s;
 }
 
 .sidebar__channelsHeader {
@@ -219,7 +222,7 @@ code {
 .chatHeader__right {
   display: flex;
   align-items: center;
-  flex: 0.5;
+  margin-right: 20px;
   justify-content: space-between;
 }
 
@@ -260,6 +263,7 @@ code {
 }
 
 .login > button {
+  margin-top: 10px;
   width: 300px;
   background-color: #738adb;
   color: #eff2f5;
@@ -272,6 +276,7 @@ code {
 }
 
 .login > div > img {
-  object-fit: contain;
+  /* object-fit: contain; */
   height: 150px;
+  width: 150px;
 }

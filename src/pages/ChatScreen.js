@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import ChatHeader from "../components/ChatHeader";
 import Message from "../components/Message";
 
-import { AddCircle, CreditCard, Gif, EmojiEmotions } from "@material-ui/icons";
+import { Send } from "@material-ui/icons";
 import firebaseApp from "../firebase/credenciales";
 import {
   getFirestore,
@@ -20,7 +20,6 @@ function ChatScreen({ activChannel, user }) {
   const [messagesList, setMessagesList] = useState([]);
 
   const anchor = useRef();
-  anchor.scrollIntoView({ behavior: "smooth" });
 
   function contentFilter(originalText) {
     const insults = [
@@ -85,9 +84,12 @@ function ChatScreen({ activChannel, user }) {
 
     setMessagesList([...messagesArr]);
   }
-
+  useEffect(() => {
+    anchor.current.scrollIntoView(false);
+  }, [messagesList]);
   useEffect(() => {
     getMessagesList();
+    // eslint-disable-next-line
   }, [activChannel]);
 
   return (
@@ -97,14 +99,13 @@ function ChatScreen({ activChannel, user }) {
       <div className="chat__messages">
         {messagesList
           ? messagesList.map((message) => {
-              return <Message firebaseMessage={message} />;
+              return <Message firebaseMessage={message} key={message.id} />;
             })
           : null}
         <div ref={anchor} style={{ marginBottom: "75px" }}></div>
       </div>
 
       <div className="chat__input">
-        <AddCircle fontSize="large" />
         <form onSubmit={sendMessage}>
           <input
             type="text"
@@ -123,10 +124,7 @@ function ChatScreen({ activChannel, user }) {
         </form>
 
         <div className="chat__inputIcons">
-          <CreditCard fontSize="large" />
-          <Gif fontSize="large" />
-          <EmojiEmotions fontSize="large"></EmojiEmotions>
-          <span></span>
+          <Send onClick={sendMessage} />
         </div>
       </div>
     </div>

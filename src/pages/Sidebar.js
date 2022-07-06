@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import SidebarChannel from "../components/SidebarChannel";
 
 import { Avatar } from "@material-ui/core";
-import { ExpandMore, Add } from "@material-ui/icons";
+import { Add } from "@material-ui/icons";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { red } from "@mui/material/colors";
 
@@ -54,13 +54,11 @@ function Sidebar({ globalUser, setActivChannel }) {
     <div className="sidebar">
       <div className="sidebar__top">
         <h3>Simon´s Server</h3>
-        <ExpandMore />
       </div>
 
       <div className="sidebar__channels">
         <div className="sidebar__channelsHeader">
           <div className="sidebar__header">
-            <ExpandMore />
             <h4>Text Channels</h4>
           </div>
 
@@ -71,8 +69,11 @@ function Sidebar({ globalUser, setActivChannel }) {
           {channelsList
             ? channelsList.map((channel) => {
                 return (
-                  <div onClick={() => setActivChannel(channel.name)}>
-                    <SidebarChannel name={channel.name} key={channel.name} />
+                  <div
+                    onClick={() => setActivChannel(channel.name)}
+                    key={channel.id}
+                  >
+                    <SidebarChannel name={channel.name} key={channel.id} />
                   </div>
                 );
               })
