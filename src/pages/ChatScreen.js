@@ -92,7 +92,7 @@ function ChatScreen({ activChannel, user }) {
   useEffect(() => {
     getMessagesList();
     // eslint-disable-next-line
-  }, [activChannel]);
+  }, [activChannel, messagesList]);
 
   return (
     <div className="chat">
