@@ -181,19 +181,34 @@ code {
 
 /* MESSAGE */
 
-.message {
+.ownMessage {
+  display: flex;
+  justify-content: right;
+  text-align: right;
+  align-items: center;
+  padding: 10px;
+  color: white;
+}
+.otherMessage {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   color: white;
 }
 
-.message__info {
+.ownMessage__info {
   margin-left: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(0, 168, 132, 0.5);
+}
+.otherMessage__info {
+  margin-left: 20px;
+  background-color: #474b53;
 }
 
 .message__timestamp {
-  color: gray;
+  color: rgb(255, 255, 255, 0.5);
   margin-left: 20px;
   font-size: x-small;
 }
@@ -260,6 +275,7 @@ code {
   align-items: center;
   height: 100vh;
   width: 100%;
+  background-color: #363a3f;
 }
 
 .login > button {

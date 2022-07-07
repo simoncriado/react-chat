@@ -35,6 +35,8 @@ function ChatScreen({ activChannel, user }) {
       "dick",
       "dickhead",
       "pussy",
+      "fuck",
+      "dumb",
     ];
 
     const array = originalText.split(" ");
@@ -99,10 +101,16 @@ function ChatScreen({ activChannel, user }) {
       <div className="chat__messages">
         {messagesList
           ? messagesList.map((message) => {
-              return <Message firebaseMessage={message} key={message.id} />;
+              return (
+                <Message
+                  firebaseMessage={message}
+                  key={message.id}
+                  user={user}
+                />
+              );
             })
           : null}
-        <div ref={anchor} style={{ marginBottom: "75px" }}></div>
+        <div ref={anchor} style={{ marginBottom: "50px" }}></div>
       </div>
 
       <div className="chat__input">
