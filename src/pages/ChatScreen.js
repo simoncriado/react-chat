@@ -110,7 +110,7 @@ function ChatScreen({ activChannel, user }) {
               );
             })
           : null}
-        <div ref={anchor} style={{ marginBottom: "50px" }}></div>
+        <div ref={anchor}></div>
       </div>
 
       <div className="chat__input">
