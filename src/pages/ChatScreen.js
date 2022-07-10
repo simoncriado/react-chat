@@ -68,8 +68,11 @@ function ChatScreen({ activChannel, user }) {
     }
 
     setInputMessage("");
-    getMessagesList();
-    anchor.current.scrollIntoView({ behavior: "smooth" });
+    // Mirar si comentando esto se rompe algo... :D/
+    // Mirar como hacer un refresh de la pagina una vez sse haya enviado el mensaje
+    //esto en vez de volver a llamar la lista de mensajes. Lo cual consume muchos recuersos y no es eficiente
+    // getMessagesList();
+    // anchor.current.scrollIntoView({ behavior: "smooth" });
   }
 
   async function getMessagesList() {
@@ -89,10 +92,13 @@ function ChatScreen({ activChannel, user }) {
   useEffect(() => {
     anchor.current.scrollIntoView(false);
   }, [messagesList]);
+  // Revisar esto: el entrar en el chat se debería mostrar el ultimo mensaje, pero de momento cada vez que hago
+  // scroll hacia arriba el sistema interpreta que hubo un cambio en message List y entonces me devuelve al final de la pagina
   useEffect(() => {
     getMessagesList();
+    // anchor.current.scrollIntoView(false);
     // eslint-disable-next-line
-  }, [activChannel, messagesList]);
+  }, [activChannel]);
 
   return (
     <div className="chat">

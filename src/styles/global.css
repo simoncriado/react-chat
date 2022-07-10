@@ -207,22 +207,26 @@ code {
   padding: 10px;
   border-radius: 5px;
   background-color: #474b53;
+  text-align: right;
 }
 .otherMessage__info h4 {
   color: #bb86fc;
   font-weight: bold;
   padding-bottom: 5px;
+  text-align: left;
 }
-.otherMessage__info .message__timestamp {
+.otherMessage__info p {
+  text-align: left;
+}
+/* .otherMessage__info .message__timestamp {
   justify-content: right;
   text-align: right;
   margin-left: 80%;
-}
+} */
 
 .message__timestamp {
   color: rgb(255, 255, 255, 0.5);
-  margin-left: 20px;
-  text-align: right;
+  /* text-align: right; */
   font-size: x-small;
 }
 

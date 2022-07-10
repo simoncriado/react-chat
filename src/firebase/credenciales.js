@@ -11,6 +11,16 @@ const firebaseConfig = {
   appId: "1:314183702834:web:4ba3e01d095b17a49bdf2b",
 };
 
+// Segundo proyecto en firebase para testear
+// const firebaseConfig = {
+//   apiKey: "AIzaSyC8vZ-YnGaYD4fKQM4pHS-yOy5yy31c_K8",
+//   authDomain: "react-chat-test-cbe8c.firebaseapp.com",
+//   projectId: "react-chat-test-cbe8c",
+//   storageBucket: "react-chat-test-cbe8c.appspot.com",
+//   messagingSenderId: "184101235626",
+//   appId: "1:184101235626:web:820e5462948f43334319d3",
+// };
+
 // Inicializamos la aplicación y la guardamos en firebaseApp
 const firebaseApp = initializeApp(firebaseConfig);
 // Exportamos firebaseApp para poder utilizarla en cualquier lugar de la aplicación
