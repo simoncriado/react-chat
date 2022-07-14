@@ -91,6 +91,7 @@ function ChatScreen({ activChannel, user }) {
   }, [messagesList]);
   useEffect(() => {
     getMessagesList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activChannel]);
 
   return (
