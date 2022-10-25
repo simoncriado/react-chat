@@ -1,6 +1,6 @@
 # Simply Chat
 
-Project part of an online React course. I choose to do this to practice my React and Firebase skills. Key project functionalities:
+Project part of an online React course. I chose to do this project to practice my React and Firebase skills. Key project functionalities:
 
   - Log in - Sign in functionalities.
   - Possibility to create new text channels.
