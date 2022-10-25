@@ -1,12 +1,16 @@
-# Plantilla de React y Firebase
+# Simply Chat
 
-Este proyecto es creado con [Create React App](https://github.com/facebook/create-react-app) y la adición de Firebase.
+Project part of an online React course. I choose to do this to practice my React and Firebase skills. Key project functionalities:
 
-## Instrucciones
+  - Log in - Sign in functionalities.
+  - Possibility to create new text channels.
+  - Send and receive new messages.
+  - Log out functionality.
 
-Antes de comenzar a trabajar no olvides añadir las credenciales de tu aplicación en src/firebase/credenciales.js
+## Tech used
 
-- Ejecuta npm install
-- Añade tus credenciales en src/firebase/credenciales
-- Ejecuta npm start para correr el ambiente de desarrollo
-- ¡A escribir código!
+HTML, CSS, React and Firebase.
+
+## You can visit the website by clicking the link below
+
+[Simply Chat](https://simply-chat.netlify.app/)
